@@ -42,6 +42,7 @@ class TestCheckInterval {
 		// lower4 < id4 <= upper4 (true)
 		BigInteger id4 = new BigInteger("15618062003214643351512781541041391612");
 		BigInteger lower4 = new BigInteger("210821560651360572675896360671414673172");
+		lower4 = lower4.add(BigInteger.ONE).mod(Hash.addressSize());
 		BigInteger upper4 = new BigInteger("15618062003214643351512781541041391612");
 		
 		// lower5 < id5 < upper5  (true)
@@ -72,7 +73,7 @@ class TestCheckInterval {
 		assertFalse(Util.checkInterval(id1, lower1, upper1));
 		assertTrue(Util.checkInterval(id2, lower2, upper2));
 		assertTrue(Util.checkInterval(id3, lower3, upper3));
-		//assertTrue(Util.checkInterval(id4, lower4, upper4));
+		assertTrue(Util.checkInterval(id4, lower4, upper4));
 		assertTrue(Util.checkInterval(id5, lower5, upper5));
 		
 		assertFalse(Util.checkInterval(id6, lower6, upper6));

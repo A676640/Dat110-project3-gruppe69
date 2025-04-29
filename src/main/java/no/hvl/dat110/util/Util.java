@@ -42,9 +42,9 @@ public class Util {
 		upper = upper.mod(Hash.addressSize());
 
 		if (lower.compareTo(upper) < 0) {
-		    return id.compareTo(lower) >= 0 && id.compareTo(upper) < 0;
+		    return id.compareTo(lower) >= 0 && id.compareTo(upper) <= 0;
 		} else if (lower.compareTo(upper) > 0) {
-		    return id.compareTo(lower) >= 0 || id.compareTo(upper) < 0;
+		    return id.compareTo(lower) >= 0 || id.compareTo(upper) <= 0;
 		} else {
 		    return true; 
 		}

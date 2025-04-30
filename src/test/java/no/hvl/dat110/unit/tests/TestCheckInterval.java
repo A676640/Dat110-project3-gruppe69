@@ -42,7 +42,6 @@ class TestCheckInterval {
 		// lower4 < id4 <= upper4 (true)
 		BigInteger id4 = new BigInteger("15618062003214643351512781541041391612");
 		BigInteger lower4 = new BigInteger("210821560651360572675896360671414673172");
-		lower4 = lower4.add(BigInteger.ONE).mod(Hash.addressSize());
 		BigInteger upper4 = new BigInteger("15618062003214643351512781541041391612");
 		
 		// lower5 < id5 < upper5  (true)
